@@ -22,6 +22,11 @@ body {
   color: #1a1b1f;
 }
 
+b,
+strong {
+  font-weight: 600;
+}
+
 .secao {
   display: flex;
   flex-flow: column;
@@ -35,7 +40,52 @@ body {
 }
 
 .caixa {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 2rem;
   background-color: #f1f1f1;
+  border-radius: 2.5rem;
+  margin-bottom: 6.1rem;
+  padding: 3.12rem 2.5rem;
+  max-width: 50rem;
+}
+.caixa__titulos {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 0.65rem;
+}
+.caixa__h1 {
+  font-size: 4.78rem;
+  line-height: 1;
+  color: #1c415c;
+  text-align: center;
+}
+.caixa__subtitulo {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+.caixa__subtitulo--cinza {
+  color: #4b4d4d;
+}
+.caixa__lista {
+  display: flex;
+  flex-flow: column;
+  gap: 0.82rem;
+  list-style: none;
+  font-size: 1.92rem;
+  line-height: 1.2;
+}
+.caixa__item-lista {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.82rem;
+}
+.caixa__icone {
+  max-width: 1.8rem;
+  margin-top: 0.21rem;
 }
 
 .secao--hero {
@@ -43,6 +93,15 @@ body {
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
+  padding-bottom: 0;
+}
+
+.container--hero {
+  align-items: end;
+}
+
+.div-lira {
+  display: flex;
 }
 
 /*# sourceMappingURL=style.css.map */
