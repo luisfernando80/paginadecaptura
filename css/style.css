@@ -63,8 +63,9 @@ strong {
   z-index: 1;
   position: relative;
   display: flex;
-  flex-flow: column;
+  flex-flow: column nowrap;
   align-items: center;
+  justify-content: start;
   gap: 2rem;
   background-color: #f1f1f1;
   border-radius: 2.5rem;
@@ -79,8 +80,10 @@ strong {
   right: 0;
   transform: translate(30%, -30%);
   display: flex;
+  flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
+  gap: 0;
   background-color: #f1f1f1;
   width: 6.5rem;
   height: 6.5rem;
@@ -90,8 +93,9 @@ strong {
 }
 .caixa__titulos {
   display: flex;
-  flex-flow: column;
+  flex-flow: column nowrap;
   align-items: center;
+  justify-content: start;
   gap: 0.65rem;
 }
 .caixa__h1 {
@@ -110,7 +114,9 @@ strong {
 }
 .caixa__lista {
   display: flex;
-  flex-flow: column;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: start;
   gap: 0.82rem;
   list-style: none;
   font-size: 1.92rem;
@@ -118,7 +124,9 @@ strong {
 }
 .caixa__item-lista {
   display: flex;
-  align-items: flex-start;
+  flex-flow: row nowrap;
+  align-items: start;
+  justify-content: start;
   gap: 0.82rem;
 }
 .caixa__icone {
@@ -132,6 +140,11 @@ strong {
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 0;
+}
+.secao--disclaimer {
+  background-color: #e1e1e1;
+  padding: 3.12rem 2rem;
+  box-shadow: 0 0.5rem 1rem -0.2rem rgba(26, 27, 31, 0.15);
 }
 
 .container--hero {
@@ -147,6 +160,11 @@ strong {
   right: 0;
   transform: translateX(40px);
   display: flex;
+}
+
+.disclaimer__paragrafo {
+  font-size: 1.33rem;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

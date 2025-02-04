@@ -1,10 +1,9 @@
 .caixa {
   z-index: 1;
   position: relative;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  gap: 2rem;
+
+  @include flex($direction: column, $align: center, $gap: 2rem);
+
   background-color: $cor-cinza-claro;
   border-radius: 2.5rem;
   margin-bottom: 6.1rem;
@@ -17,9 +16,9 @@
     top: 0;
     right: 0;
     transform: translate(30%, -30%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+    @include flex($align: center, $justify: center);
+
     background-color: $cor-cinza-claro;
     width: 6.5rem;
     height: 6.5rem;
@@ -29,10 +28,7 @@
   }
 
   &__titulos {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    gap: 0.65rem;
+    @include flex($direction: column, $align: center, $gap: 0.65rem);
   }
 
   &__h1 {
@@ -53,18 +49,15 @@
   }
 
   &__lista {
-    display: flex;
-    flex-flow: column;
-    gap: 0.82rem;
+    @include flex($direction: column, $gap: 0.82rem);
+
     list-style: none;
     font-size: 1.92rem;
     line-height: 1.2;
   }
 
   &__item-lista {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.82rem;
+    @include flex($align: start, $gap: 0.82rem);
   }
 
   &__icone {
