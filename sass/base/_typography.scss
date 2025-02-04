@@ -13,3 +13,13 @@ b,
 strong {
   font-weight: 600;
 }
+
+.titulo {
+  @extend %titulo;
+  font-weight: 500;
+
+  & span {
+    color: $cor-azul-claro;
+    font-weight: 600;
+  }
+}

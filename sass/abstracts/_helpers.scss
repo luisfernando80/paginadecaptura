@@ -9,6 +9,7 @@ $cor-cinza-claro: #f1f1f1;
 $cor-cinza-escuro: #4b4d4d;
 $cor-cinza: #e1e1e1;
 $cor-azul-escuro: #1c415c;
+$cor-azul-claro: #256783;
 $cor-amarelo: #eebe2a;
 
 // MIXINS
@@ -25,4 +26,16 @@ $cor-amarelo: #eebe2a;
   align-items: $align;
   justify-content: $justify;
   gap: $gap;
+}
+
+// EXTEND
+
+%titulo {
+  font-size: 4.88rem;
+  line-height: 1;
+}
+
+%subtitulo {
+  font-size: 2.76rem;
+  font-weight: 700;
 }

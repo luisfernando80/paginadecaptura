@@ -32,16 +32,13 @@
   }
 
   &__h1 {
-    font-size: 4.78rem;
-    line-height: 1;
+    @extend %titulo;
     color: $cor-azul-escuro;
     text-align: center;
   }
 
   &__subtitulo {
-    font-size: 2.5rem;
-    line-height: 1.2;
-    font-weight: 700;
+    @extend %subtitulo;
 
     &--cinza {
       color: $cor-cinza-escuro;
