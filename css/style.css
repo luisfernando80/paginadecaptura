@@ -8,7 +8,7 @@ html {
   font-size: 62.5%;
 }
 
-.img {
+img {
   max-width: 100%;
 }
 
@@ -39,7 +39,29 @@ strong {
   margin: auto;
 }
 
+.botao {
+  cursor: pointer;
+  border-radius: 5rem;
+  padding: 1rem 2.5rem;
+  border: solid 0.2rem black;
+  border-bottom-width: 0.4rem;
+  border-right-width: 0.4rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.92rem;
+}
+.botao:hover {
+  border-width: 0.3rem;
+}
+.botao--amarelo {
+  color: #fff;
+  background-color: #eebe2a;
+  border-color: rgb(117.6130434783, 91.1086956522, 9.3869565217);
+}
+
 .caixa {
+  z-index: 1;
+  position: relative;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -49,6 +71,22 @@ strong {
   margin-bottom: 6.1rem;
   padding: 3.12rem 2.5rem;
   max-width: 50rem;
+  box-shadow: inset 0 0 1rem 0.6rem rgba(0, 0, 0, 0.2);
+}
+.caixa__div-logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(30%, -30%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f1f1;
+  width: 6.5rem;
+  height: 6.5rem;
+  padding: 1.1rem;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0.8rem rgba(0, 0, 0, 0.2);
 }
 .caixa__titulos {
   display: flex;
@@ -97,10 +135,17 @@ strong {
 }
 
 .container--hero {
+  position: relative;
   align-items: end;
+  width: 100%;
 }
 
 .div-lira {
+  height: 58rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translateX(40px);
   display: flex;
 }
 

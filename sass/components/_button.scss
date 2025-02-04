@@ -1,3 +1,25 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+
+.botao {
+  cursor: pointer;
+  border-radius: 5rem;
+  padding: 1rem 2.5rem;
+  border: solid 0.2rem black;
+  border-bottom-width: 0.4rem;
+  border-right-width: 0.4rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.92rem;
+
+  &:hover {
+    border-width: 0.3rem;
+  }
+
+  &--amarelo {
+    color: #fff;
+    background-color: $cor-amarelo;
+    border-color: darken($cor-amarelo, 30%);
+  }
+}
