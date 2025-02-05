@@ -1,6 +1,13 @@
+.popup--aberto {
+  & .popup {
+    display: flex;
+  }
+}
+
 .popup {
   @include flex($justify: center, $align: center);
 
+  display: none;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -8,14 +15,18 @@
   right: 0;
   background-color: rgba(#fff, 0.925);
   backdrop-filter: blur(2.5px);
-
   z-index: 1;
 
-  &__container {
+  &__inputs {
     @include flex($direction: column, $gap: 1rem);
+  }
+
+  &__container {
+    @include flex($direction: column, $gap: 2rem);
 
     position: relative;
     max-width: 50rem;
+    width: 100%;
     background-color: #fff;
     padding: 3.12rem;
     border-radius: 2.5rem;
@@ -51,9 +62,23 @@
     padding: 0.82rem 1.28rem;
     border-radius: 5rem;
     border: solid 0.2rem #000;
+    color: inherit;
 
     &--amarelo {
       border-color: $cor-amarelo;
+    }
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: 0 0 1rem rgba($cor-amarelo, 0.5);
+    }
+  }
+
+  &__botao {
+    @extend %botao;
+
+    &--amarelo {
+      @extend %botao--amarelo;
     }
   }
 }

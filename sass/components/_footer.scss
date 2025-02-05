@@ -12,7 +12,8 @@
     color: inherit;
 
     &:hover {
-      color: ($cor-azul-escuro);
+      color: ($cor-azul-claro);
+      font-weight: 600;
       text-decoration: underline;
     }
   }
