@@ -25,11 +25,12 @@
     width: 100%;
   }
 
-  &--passo {
+  &--passo,
+  &--aprender {
     @include flex($direction: column, $gap: 6rem);
   }
 
-  .passos-cabecalho {
+  .cabecalho-titulo {
     @include flex($align: center, $gap: 2rem);
   }
 
@@ -38,6 +39,27 @@
       grid-template-columns: repeat(3, 1fr);
       row-gap: 6rem;
       column-gap: 3rem;
+    }
+
+    &--aprender {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4rem;
+
+      & a {
+        overflow: hidden;
+        border-radius: 2rem;
+      }
+
+      & img {
+        border-radius: 2rem;
+
+        width: 100%;
+        transition: transform linear 0.1s;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
     }
   }
 }
