@@ -3,9 +3,10 @@
   line-height: 1;
 }
 
-.passo__titulo, .caixa__subtitulo {
+.passo__titulo, .caixa__subtitulo, .subtitulo {
   font-size: 2.76rem;
   font-weight: 700;
+  line-height: 1.1;
 }
 
 * {
@@ -44,6 +45,10 @@ strong {
 .titulo span {
   color: #256783;
   font-weight: 600;
+}
+
+.subtitulo span {
+  color: #eebe2a;
 }
 
 .secao {
@@ -200,7 +205,10 @@ strong {
   background-position-x: 50%;
   background-position-y: 100%;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
+  padding-bottom: 0;
+  padding-top: 21rem;
+  margin-top: -10rem;
 }
 
 .container--hero {
@@ -214,6 +222,10 @@ strong {
   align-items: stretch;
   justify-content: start;
   gap: 6rem;
+}
+.container--quem {
+  position: relative;
+  width: 100%;
 }
 .container .cabecalho-titulo {
   display: flex;
@@ -262,6 +274,40 @@ strong {
   grid-column: 2;
   grid-row: 1/span 2;
   align-self: center;
+}
+
+.quem {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 3.12rem;
+  max-width: 50%;
+  width: 100%;
+  color: #fff;
+  margin-bottom: 6.1rem;
+}
+.quem__cabecalho {
+  border-left: solid 0.4rem #eebe2a;
+  padding-left: 2rem;
+}
+.quem__textos {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 1.6rem;
+}
+.quem__textos span {
+  color: #eebe2a;
+  font-weight: 600;
+}
+
+.img-lira-logo {
+  position: absolute;
+  width: 45%;
+  bottom: 0;
+  right: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

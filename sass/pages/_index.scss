@@ -22,7 +22,10 @@
     background-position-x: 50%;
     background-position-y: 100%;
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
+    padding-bottom: 0;
+    padding-top: 21rem;
+    margin-top: -10rem;
   }
 }
 
@@ -36,6 +39,11 @@
   &--passo,
   &--aprender {
     @include flex($direction: column, $gap: 6rem);
+  }
+
+  &--quem {
+    position: relative;
+    width: 100%;
   }
 
   .cabecalho-titulo {
@@ -94,4 +102,35 @@
   grid-column: 2;
   grid-row: 1 / span 2;
   align-self: center;
+}
+
+// SECAO QUEM
+
+.quem {
+  @include flex($direction: column, $gap: 3.12rem);
+  max-width: 50%;
+  width: 100%;
+  color: #fff;
+  margin-bottom: 6.1rem;
+
+  &__cabecalho {
+    border-left: solid 0.4rem $cor-amarelo;
+    padding-left: 2rem;
+  }
+
+  &__textos {
+    @include flex($direction: column, $gap: 1.6rem);
+
+    & span {
+      color: $cor-amarelo;
+      font-weight: 600;
+    }
+  }
+}
+
+.img-lira-logo {
+  position: absolute;
+  width: 45%;
+  bottom: 0;
+  right: 0;
 }
