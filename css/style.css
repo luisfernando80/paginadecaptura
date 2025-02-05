@@ -209,6 +209,69 @@ strong {
   text-decoration: underline;
 }
 
+.popup {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.925);
+  backdrop-filter: blur(2.5px);
+  z-index: 1;
+}
+.popup__container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 1rem;
+  position: relative;
+  max-width: 50rem;
+  background-color: #fff;
+  padding: 3.12rem;
+  border-radius: 2.5rem;
+  box-shadow: inset 0 0 0.8rem 0.2rem rgba(225, 225, 225, 0.953);
+}
+.popup__container .fechar {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(30%, -30%);
+  cursor: pointer;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background-color: #fff;
+  font-size: inherit;
+  background-color: #eebe2a;
+  border: 0.2rem solid rgb(117.6130434783, 91.1086956522, 9.3869565217);
+  font-size: 1.92rem;
+  font-weight: 700;
+  color: #fff;
+}
+.popup__container .fechar:hover {
+  border: 0.1rem solid rgb(117.6130434783, 91.1086956522, 9.3869565217);
+}
+.popup__input {
+  font-size: inherit;
+  padding: 0.82rem 1.28rem;
+  border-radius: 5rem;
+  border: solid 0.2rem #000;
+}
+.popup__input--amarelo {
+  border-color: #eebe2a;
+}
+
 .secao--hero {
   background-image: url(https://assets-global.website-files.com/61b9e0dd381626819c8d4f83/64957938a8a62d8071397ed5_pgc-python-bg1.webp);
   background-position: 50%;
