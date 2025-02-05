@@ -188,6 +188,27 @@ strong {
   color: #256783;
 }
 
+.rodape {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.8rem;
+  padding: 4.88rem 2rem;
+  margin: 0 16.5rem;
+}
+.rodape img {
+  width: 3.7rem;
+}
+.rodape a {
+  text-decoration: none;
+  color: inherit;
+}
+.rodape a:hover {
+  color: #1c415c;
+  text-decoration: underline;
+}
+
 .secao--hero {
   background-image: url(https://assets-global.website-files.com/61b9e0dd381626819c8d4f83/64957938a8a62d8071397ed5_pgc-python-bg1.webp);
   background-position: 50%;
