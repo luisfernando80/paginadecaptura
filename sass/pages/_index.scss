@@ -9,11 +9,12 @@
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 0;
+    overflow: hidden;
   }
 
   &--disclaimer {
     background-color: $cor-cinza;
-    padding: 3.12rem 2rem;
+    padding: 3.12rem 6rem;
     box-shadow: 0 0.5rem 1rem -0.2rem rgba($cor-preta, 0.15);
   }
 
@@ -26,6 +27,11 @@
     padding-bottom: 0;
     padding-top: 21rem;
     margin-top: -10rem;
+
+    @include respond(small) {
+      padding-top: 36rem;
+      margin-top: -26rem;
+    }
   }
 }
 
@@ -34,16 +40,32 @@
     position: relative;
     align-items: end;
     width: 100%;
+
+    @include respond(small) {
+      flex-flow: column;
+      align-items: center;
+      gap: 3.12rem;
+    }
   }
 
   &--passo,
   &--aprender {
     @include flex($direction: column, $gap: 6rem);
+
+    @include respond(small) {
+      gap: 4rem;
+    }
   }
 
   &--quem {
     position: relative;
     width: 100%;
+
+    @include respond(small) {
+      flex-flow: column;
+      align-items: center;
+      gap: 3.12rem;
+    }
   }
 
   .cabecalho-titulo {
@@ -55,11 +77,28 @@
       grid-template-columns: repeat(3, 1fr);
       row-gap: 6rem;
       column-gap: 3rem;
+
+      @include respond(small) {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 3.12rem;
+        column-gap: 2rem;
+      }
+
+      @include respond(little) {
+        grid-column: 1fr;
+        grid-row: auto;
+        row-gap: 3.12rem;
+        column-gap: 2rem;
+      }
     }
 
     &--aprender {
       grid-template-columns: repeat(2, 1fr);
       gap: 4rem;
+
+      @include respond(small) {
+        gap: 2rem;
+      }
 
       & a {
         overflow: hidden;
@@ -81,12 +120,18 @@
 }
 
 .div-lira {
-  height: 58rem;
+  width: 70%;
   position: absolute;
   bottom: 0;
   right: 0;
   transform: translateX(40px);
   display: flex;
+
+  @include respond(small) {
+    position: relative;
+    transform: translateX(0);
+    width: 53rem;
+  }
 }
 
 // SECAO DISCLAIMER
@@ -98,10 +143,23 @@
 
 // SECAO PASSO A PASSO
 
+.img-seta {
+  @include respond(small) {
+    width: 3.7rem;
+  }
+}
+
 .img-lira {
   grid-column: 2;
   grid-row: 1 / span 2;
   align-self: center;
+
+  @include respond(small) {
+    justify-self: center;
+    grid-row: auto;
+    grid-column: 1 / span 2;
+    max-width: 27.5rem;
+  }
 }
 
 // SECAO QUEM
@@ -112,6 +170,11 @@
   width: 100%;
   color: #fff;
   margin-bottom: 6.1rem;
+
+  @include respond(small) {
+    max-width: 53rem;
+    margin-bottom: 0;
+  }
 
   &__cabecalho {
     border-left: solid 0.4rem $cor-amarelo;
@@ -133,4 +196,8 @@
   width: 45%;
   bottom: 0;
   right: 0;
+
+  @include respond(small) {
+    position: relative;
+  }
 }

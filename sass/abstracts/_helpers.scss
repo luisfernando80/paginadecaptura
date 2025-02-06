@@ -28,11 +28,35 @@ $cor-amarelo: #eebe2a;
   gap: $gap;
 }
 
+@mixin respond($tamanho) {
+  @if $tamanho == big {
+    @media (max-width: 60.625em) {
+      @content;
+    }
+  } @else if $tamanho == medium {
+    @media (max-width: 54.125em) {
+      @content;
+    }
+  } @else if $tamanho == small {
+    @media (max-width: 48.125em) {
+      @content;
+    }
+  } @else if $tamanho == little {
+    @media (max-width: 30em) {
+      @content;
+    }
+  }
+}
+
 // EXTEND
 
 %titulo {
   font-size: 4.88rem;
   line-height: 1;
+
+  @include respond(small) {
+    font-size: 3.98rem;
+  }
 }
 
 %subtitulo {
