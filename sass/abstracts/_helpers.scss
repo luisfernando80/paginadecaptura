@@ -41,7 +41,7 @@ $cor-amarelo: #eebe2a;
     @media (max-width: 48.125em) {
       @content;
     }
-  } @else if $tamanho == little {
+  } @else if $tamanho == tiny {
     @media (max-width: 30em) {
       @content;
     }
@@ -57,12 +57,22 @@ $cor-amarelo: #eebe2a;
   @include respond(small) {
     font-size: 3.98rem;
   }
+
+  @include respond(tiny) {
+    font-size: 3.12rem;
+  }
 }
 
 %subtitulo {
   font-size: 2.76rem;
   font-weight: 700;
   line-height: 1.1;
+}
+
+%subtitulo--pequeno {
+  @include respond(tiny) {
+    font-size: 2.3rem;
+  }
 }
 
 %botao {
@@ -89,4 +99,10 @@ $cor-amarelo: #eebe2a;
 
 %botao--centralizado {
   align-self: center;
+}
+
+%botao--texto-pequeno {
+  @include respond(tiny) {
+    font-size: 1.6rem;
+  }
 }

@@ -5,8 +5,11 @@
 .secao {
   display: flex;
   flex-flow: column;
-
   padding: 6.1rem 2rem;
+
+  @include respond(tiny) {
+    padding: 3.12rem 2.5rem;
+  }
 }
 
 .container {

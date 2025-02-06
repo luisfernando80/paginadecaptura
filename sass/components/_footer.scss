@@ -1,7 +1,15 @@
 .rodape {
-  @include flex($gap: 0.8rem, $align: center, $justify: flex-end);
+  @include flex($gap: 0.8rem, $align: center, $justify: center);
   padding: 4.88rem 2rem;
   margin: 0 16.5rem;
+  text-align: center;
+
+  @include respond(tiny) {
+    margin: 0;
+    flex-flow: column;
+    gap: 2rem;
+    padding: 2.44rem 1rem;
+  }
 
   & img {
     width: 3.7rem;
@@ -10,10 +18,10 @@
   & a {
     text-decoration: none;
     color: inherit;
+    transition: color linear 0.1s;
 
     &:hover {
       color: ($cor-azul-claro);
-      font-weight: 600;
       text-decoration: underline;
     }
   }
